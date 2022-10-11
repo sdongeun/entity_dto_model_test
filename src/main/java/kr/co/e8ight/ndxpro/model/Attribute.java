@@ -1,16 +1,15 @@
-package kr.co.e8ight.ndxpro.vo;
+package kr.co.e8ight.ndxpro.model;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
 import java.time.LocalDate;
-import java.util.List;
 
-public class EntityVO {
+public class Attribute {
 
-    private EntityIdVO id;
+    private String type;
 
-    private List<String> attrNames;
+    private Object value;
 
     @CreatedDate
     private LocalDate creDate;
@@ -18,5 +17,4 @@ public class EntityVO {
     @LastModifiedDate
     private LocalDate modDate;
 
-    private String lastCorrelator;
 }
