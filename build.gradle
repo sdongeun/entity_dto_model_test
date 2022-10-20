@@ -20,6 +20,12 @@ dependencies {
 
     // mongo db
     implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+
+    // jackson
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+
+    // lombok
+    implementation('org.projectlombok:lombok')
 }
 
 tasks.named('test') {

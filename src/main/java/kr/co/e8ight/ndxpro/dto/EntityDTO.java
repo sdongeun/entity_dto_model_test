@@ -1,20 +1,22 @@
 package kr.co.e8ight.ndxpro.dto;
 
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
 import java.util.HashMap;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonIgnoreProperties(value = { "createdAt", "modifiedAt", "creDate", "modDate" })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class EntityDTO extends HashMap<String, Object> {
 
     private String id;
 
     private String type;
 
-    @CreatedDate
-    private LocalDate createdAt;
-
-    @LastModifiedDate
-    private LocalDate modifiedAt;
 }
